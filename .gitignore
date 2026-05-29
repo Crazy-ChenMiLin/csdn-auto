@@ -1,0 +1,11 @@
+node_modules/
+*.txt
+cookies/
+output/
+*.png
+*.jpg
+*.json
+!package.json
+!package-lock.json
+.env
+.DS_Store
