@@ -1,0 +1,50 @@
+[
+    {
+        "front": "Caffeine 和 Buffer 属于哪个领域，解决的问题有何不同？",
+        "back": "Caffeine 是 Java 编程语言中的高性能本地缓存库，Buffer 是操作系统或计算机硬件层面的临时数据中转站",
+        "example": "Caffeine 用于减少数据库查询次数，Buffer 用于平滑不同速度设备间的数据传输",
+        "extra": "一个在应用层，一个在系统/硬件层，各司其职",
+        "source": "Caffeine 和 Buffer 区别分析",
+        "tags": ["Java", "Caffeine", "Buffer"]
+    },
+    {
+        "front": "Caffeine 和 Buffer 的核心目的分别是什么？",
+        "back": "<b>Caffeine</b>：读加速，通过内存缓存复用数据<br><b>Buffer</b>：写优化，作为临时中转平滑速度差异",
+        "example": "Caffeine 缓存商品详情，Buffer 暂存即将写入硬盘的数据",
+        "extra": "Caffeine 为了复用；Buffer 为了中转",
+        "source": "Caffeine 和 Buffer 核心目的分析",
+        "tags": ["Caffeine", "Buffer"]
+    },
+    {
+        "front": "Caffeine 和 Buffer 的数据生命周期有什么区别？",
+        "back": "<b>Caffeine</b>：较长，直到过期或被淘汰<br><b>Buffer</b>：极短，数据写入目标设备后通常清空",
+        "example": "Caffeine 中的数据可能存活数小时，Buffer 中的数据存活毫秒级",
+        "extra": "Caffeine 数据有生命周期管理；Buffer 数据即时消费",
+        "source": "Caffeine 和 Buffer 数据生命周期分析",
+        "tags": ["Caffeine", "Buffer"]
+    },
+    {
+        "front": "Caffeine 和 Buffer 的常见应用场景分别有哪些？",
+        "back": "<b>Caffeine</b>：缓存商品详情、用户配置、秒杀库存等<br><b>Buffer</b>：视频播放缓冲、文件写入磁盘前的暂存",
+        "example": "电商系统使用 Caffeine 缓存商品信息；视频网站使用 Buffer 缓冲视频数据",
+        "extra": "Caffeine 用于高频读场景；Buffer 用于 IO 密集场景",
+        "source": "Caffeine 和 Buffer 应用场景分析",
+        "tags": ["Caffeine", "Buffer", "场景"]
+    },
+    {
+        "front": "Caffeine 和 Buffer 在高并发电商系统架构中的关系是什么？",
+        "back": "它们在不同层次协同工作，各自负责不同的性能优化任务",
+        "example": "1. Caffeine 本地缓存热点数据 → 2. MySQL Buffer Pool 缓存数据页 → 3. Linux Buffer 批量刷盘",
+        "extra": "Caffeine 在应用层，Buffer Pool 在数据库层，Linux Buffer 在操作系统层",
+        "source": "Caffeine 和 Buffer 在架构中的关系分析",
+        "tags": ["Caffeine", "Buffer", "架构"]
+    },
+    {
+        "front": "为什么 Caffeine 和 Buffer 都能让计算机跑得更快？",
+        "back": "Caffeine 在应用层帮你“偷懒”（少查数据库），Buffer 在底层帮你“打包”（高效传输数据）",
+        "example": "Caffeine 避免重复查询；Buffer 减少磁盘 IO 次数",
+        "extra": "都是性能优化手段，但方法不同",
+        "source": "Caffeine 和 Buffer 性能优化分析",
+        "tags": ["Caffeine", "Buffer", "性能优化"]
+    }
+]

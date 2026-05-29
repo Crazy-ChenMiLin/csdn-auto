@@ -1,0 +1,122 @@
+[
+    {
+        "front": "Redis Bitmap 如何实现点赞的幂等性？",
+        "back": "利用 <b>SETBIT</b> 命令的原子性",
+        "example": "用户点赞时执行 SETBIT like:post:1001 用户ID 1，重复执行结果不变",
+        "extra": "位值一旦设为1，再次SETBIT不会改变状态，天然防止重复计数",
+        "source": "Redis Bitmap 操作原理",
+        "tags": ["Redis", "Bitmap", "幂等性"]
+    },
+    {
+        "front": "Bitmap 和 SDS 的存储粒度有什么区别？",
+        "back": "<b>Bitmap</b>：按位存储，适合大量小布尔值<br><b>SDS</b>：按计数器组打包，适合少量大数值",
+        "example": "100万用户的点赞状态 → Bitmap只需约122KB；用SDS需要存储100万个计数器",
+        "extra": "Bitmap 1位=1个状态；SDS一个计数器=多个字节",
+        "source": "Redis Bitmap vs SDS 设计原理",
+        "tags": ["Redis", "Bitmap", "SDS"]
+    },
+    {
+        "front": "为什么点赞场景不用Hash而用Bitmap？",
+        "back": "<b>Hash的HGET+HSET组合操作非原子</b>，并发会错乱",
+        "example": "并发场景：用户A HGET=0 → 用户B HGET=0 → A HSET=1 → B HSET=1，重复计数！",
+        "extra": "Bitmap的SETBIT是单个原子命令，不会出现竞态条件",
+        "source": "Redis 原子操作与并发控制",
+        "tags": ["Redis", "Bitmap", "Hash"]
+    },
+    {
+        "front": "Bitmap 大Key优化的核心思路是什么？",
+        "back": "<b>分片（Sharding）</b>：将大Bitmap拆成多个小Key",
+        "example": "用户ID % 10 = 分片号，like:post:1001:0 ~ like:post:1001:9",
+        "extra": "查询时分别读取各分片的BITCOUNT，累加得总数，避免单个Key过大",
+        "source": "Redis 大Key优化策略",
+        "tags": ["Redis", "Bitmap", "优化"]
+    },
+    {
+        "front": "Lua+Bitmap+SDS如何配合使用？",
+        "back": "<b>Bitmap</b>存用户点赞状态，<b>SDS</b>存点赞总数，<b>Lua</b>原子联动更新",
+        "example": "Lua脚本：SETBIT设置状态 → 读取BITCOUNT → 更新SDS计数，全部在一个原子操作中完成",
+        "extra": "Lua脚本保证两个操作要么都成功，要么都失败，避免数据不一致",
+        "source": "Redis Lua 脚本原子操作",
+        "tags": ["Redis", "Bitmap", "SDS", "Lua"]
+    },
+    {
+        "front": "Bitmap数据同步到MySQL为什么不用Lua？",
+        "back": "<b>Lua只适合Redis内部原子操作</b>，不适合跨系统同步",
+        "example": "正确做法：Java/Python定时任务读取Bitmap → 批量INSERT/UPDATE到MySQL",
+        "extra": "Lua无法直接连接MySQL，跨系统同步用专门的数据同步程序更合适",
+        "source": "Redis 数据持久化与同步策略",
+        "tags": ["Redis", "Bitmap", "MySQL"]
+    },
+    {
+        "front": "三级缓存的层级结构是什么？",
+        "back": "<b>L1 Caffeine</b>(本地内存) → <b>L2 Redis</b>(分布式) → <b>L3 DB</b>(数据库)",
+        "example": "用户请求Feed流：先查本地Caffeine → 未命中查Redis → 再未命中查MySQL",
+        "extra": "L1最快但每个节点独立；L2共享但需网络；L3最慢但数据最全",
+        "source": "多级缓存架构设计",
+        "tags": ["Redis", "缓存", "架构"]
+    },
+    {
+        "front": "L1本地缓存的Key格式是什么？",
+        "back": "<code>feed:public:{size}:{page}:v1</code>",
+        "example": "feed:public:20:1:v1 表示第1页、每页20条的公开Feed流",
+        "extra": "size=每页数量，page=页码，v1=版本号，便于灰度升级",
+        "source": "Feed流缓存Key设计",
+        "tags": ["Redis", "缓存", "Key格式"]
+    },
+    {
+        "front": "L2 Redis缓存拆成哪几部分存储？",
+        "back": "①<b>动态ID列表</b> ②<b>单条动态详情</b> ③<b>hasMore标记</b>",
+        "example": "feed:public:ids:20:14:1 存ID列表；feed:item:1001 存单条详情",
+        "extra": "ID列表+详情分离，更新单条动态时只需刷新详情缓存，不影响列表",
+        "source": "Redis 缓存拆分策略",
+        "tags": ["Redis", "缓存", "架构"]
+    },
+    {
+        "front": "为什么需要反向索引？设计目标是什么？",
+        "back": "从<b>知文ID</b>快速找到包含它的所有<b>Feed页面Key</b>",
+        "example": "知文1001被点赞 → 查反向索引找到包含它的10个Feed页面 → 批量更新这些页面缓存",
+        "extra": "分布式环境下共享缓存更新信息，解决缓存更新范围定位问题",
+        "source": "缓存反向索引设计模式",
+        "tags": ["Redis", "缓存", "架构"]
+    },
+    {
+        "front": "缓存更新时为什么要先改L1再改L2？",
+        "back": "<b>L1是本地内存最快</b>，先更新本地再更新远程，保证性能",
+        "example": "先更新Caffeine(0.1ms) → 再更新Redis(2ms)，用户感知延迟最小化",
+        "extra": "如果先改L2，其他节点可能读到旧数据；但L1+L2顺序更新能平衡一致性和性能",
+        "source": "多级缓存更新策略",
+        "tags": ["Redis", "缓存", "架构"]
+    },
+    {
+        "front": "为什么监听代码里不直接同步数据库？",
+        "back": "设计上<b>禁止实时同步</b>，由<b>独立后台定时任务</b>批量同步",
+        "example": "点赞事件只改Redis缓存 → 每10分钟定时任务把Redis计数批量写入MySQL",
+        "extra": "降低耦合、削峰填谷、减少DB压力；最终一致性即可满足业务需求",
+        "source": "异步数据同步架构",
+        "tags": ["Redis", "缓存", "架构"]
+    },
+    {
+        "front": "Bitmap 的 BITCOUNT 有什么能力？",
+        "back": "可以<b>统计任意范围内</b>的1的个数（即点赞用户数）",
+        "example": "BITCOUNT like:post:1001 0 10000 统计前10000个用户的点赞数",
+        "extra": "O(N)复杂度，N是字节数，可高效统计百万级用户数据",
+        "source": "Redis BITCOUNT 命令",
+        "tags": ["Redis", "Bitmap"]
+    },
+    {
+        "front": "SDS 计数的统计能力局限是什么？",
+        "back": "只能获取<b>预先打包好的总数</b>，<b>无法动态统计</b>任意范围",
+        "example": "SDS存了总点赞数1000，但无法知道「前100个用户中有多少人点赞」",
+        "extra": "SDS适合存聚合值，Bitmap适合按位统计；两者互补使用",
+        "source": "定制化 SDS 二进制计数",
+        "tags": ["Redis", "SDS"]
+    },
+    {
+        "front": "更新Bitmap单个位 vs 更新SDS计数器的效率差异？",
+        "back": "<b>Bitmap</b>：SETBIT直接操作单个位<br><b>SDS</b>：需读取→解析→修改→重写整个字符串",
+        "example": "Bitmap：SETBIT key offset 1 直接定位到第offset位<br>SDS：GET → 反序列化 → 修改 → SET",
+        "extra": "Bitmap O(1)复杂度；SDS O(N)复杂度，数据量越大差距越明显",
+        "source": "Redis 位操作 vs 字符串操作性能对比",
+        "tags": ["Redis", "Bitmap", "SDS"]
+    }
+]

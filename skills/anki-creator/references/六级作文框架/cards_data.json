@@ -1,0 +1,79 @@
+[
+    {
+        "front": "六级作文·现象解释型 模板框架",
+        "back": "三段式结构：<br>① 引出现象（描述现象+引出关注）<br>② 分析原因（2-3个原因）<br>③ 总结展望（解决方案+呼吁）",
+        "example": "这是六级最高频的作文类型，出现率 ⭐⭐⭐⭐⭐",
+        "extra": "关键词：In recent years... / Several factors contribute to... / In conclusion...",
+        "Source": "六级作文·现象解释型"
+    },
+    {
+        "front": "【第一段模板】引出现象",
+        "back": "In recent years, <b>[现象]</b> has become a widespread concern among <b>[人群]</b>. There are several factors contributing to this phenomenon.",
+        "example": "In recent years, <b>mental health issues among college students</b> have become a widespread concern in society.",
+        "extra": "替换表达：<br>• has drawn widespread attention<br>• has aroused public concern<br>• has become a hot topic",
+        "Source": "六级作文·现象解释型"
+    },
+    {
+        "front": "【第二段模板】分析原因",
+        "back": "<b>To begin with</b>, [原因1]. <b>Furthermore</b>, [原因2]. <b>Last but not least</b>, [原因3].",
+        "example": "To begin with, the fierce competition in the job market places enormous pressure on students.",
+        "extra": "逻辑连接词替换：<br>• First and foremost / Moreover / Finally<br>• In the first place / In addition / Additionally<br>• One major reason is that... / Another factor is...",
+        "Source": "六级作文·现象解释型"
+    },
+    {
+        "front": "【第三段模板】总结+展望",
+        "back": "<b>In conclusion</b>, it is essential for [主体] to [行动]. <b>Only in this way can we</b> [美好展望].",
+        "example": "In conclusion, it is essential for universities to strengthen mental health education. Only in this way can we build a healthier campus environment.",
+        "extra": "结尾升华句型：<br>• It is high time that we took action to...<br>• Only by doing so can we achieve...<br>• Let us work together to build a better...",
+        "Source": "六级作文·现象解释型"
+    },
+    {
+        "front": "六级作文·范文：大学生心理健康（完整第一段）",
+        "back": "In recent years, <b>mental health</b> issues among college students have become a <b>widespread</b> concern in society. <b>Statistics</b> show that an <b>increasing</b> number of students suffer from <b>anxiety</b> and <b>depression</b> during their academic years.",
+        "example": "亮点词汇：mental health / widespread / statistics / increasing / anxiety / depression",
+        "extra": "开头技巧：用 Statistics show that... 增加说服力<br>用 an increasing number of 替代 more and more",
+        "Source": "六级作文·大学生心理健康"
+    },
+    {
+        "front": "六级作文·范文：大学生心理健康（完整第二段）",
+        "back": "Several factors <b>contribute to</b> this phenomenon. <b>Primarily</b>, the fierce <b>competition</b> in the job market places enormous <b>pressure</b> on students. <b>Furthermore</b>, many students struggle to <b>adapt to</b> independent campus life, feeling <b>isolated</b> from their families. <b>Additionally</b>, the <b>excessive</b> use of social media has <b>aggravated</b> their psychological <b>burden</b>.",
+        "example": "亮点词汇：contribute to / primarily / fierce / competition / adapt to / isolated / excessive / aggravate / burden",
+        "extra": "句式亮点：<br>• struggle to adapt to（挣扎着适应）<br>• feeling isolated from（现在分词作伴随状语）<br>• has aggravated（现在完成时表持续影响）",
+        "Source": "六级作文·大学生心理健康"
+    },
+    {
+        "front": "六级作文·范文：大学生心理健康（完整第三段）",
+        "back": "<b>In conclusion</b>, it is <b>essential</b> for universities to <b>strengthen</b> mental health education and provide <b>professional</b> <b>counseling</b> services. <b>Meanwhile</b>, students should learn to <b>maintain</b> a <b>positive</b> attitude and seek help when <b>necessary</b>. <b>Only in this way can we</b> build a healthier campus environment.",
+        "example": "亮点词汇：essential / strengthen / professional / counseling / maintain / positive / necessary",
+        "extra": "结尾万能句型：<br>• Only in this way can we...（倒装句，加分！）<br>• It is essential for sb to do sth（虚拟语气）<br>• Meanwhile（同时，替换 Besides）",
+        "Source": "六级作文·大学生心理健康"
+    },
+    {
+        "front": "六级写作·高分替换词（告别小学生词汇）",
+        "back": "more and more → <b>an increasing number of</b><br>very important → <b>essential / crucial / vital</b><br>think → <b>maintain / argue / contend</b><br>good → <b>positive / beneficial / favorable</b><br>bad → <b>negative / detrimental / adverse</b>",
+        "example": "原句：More and more students think English is very important.<br>升级：An increasing number of students <b>contend</b> that English is <b>crucial</b>.",
+        "extra": "阅卷老师看到这些词会加分！避免使用 good/bad/important/very 等初级词汇",
+        "Source": "六级作文·写作技巧"
+    },
+    {
+        "front": "六级写作·万能句型（现象解释型专用）",
+        "back": "① <b>There is no denying that...</b> 不可否认…<br>② <b>It is universally acknowledged that...</b> 众所周知…<br>③ <b>A number of factors account for...</b> 许多因素导致…<br>④ <b>It is high time that we took action to...</b> 是时候采取行动…<br>⑤ <b>Only in this way can we...</b> 只有这样我们才能…",
+        "example": "It is universally acknowledged that mental health is essential for college students.",
+        "extra": "⑤ 是倒装句，六级作文加分神器！<br>④ 用虚拟语气（took），语法加分！",
+        "Source": "六级作文·万能句型"
+    },
+    {
+        "front": "六级写作·逻辑连接词大全",
+        "back": "【递进】Furthermore / Moreover / Additionally / In addition<br>【转折】However / Nevertheless / On the contrary<br>【因果】Therefore / Consequently / As a result<br>【举例】For instance / For example / Take...as an example<br>【总结】In conclusion / To sum up / In a nutshell",
+        "example": "The competition is fierce. <b>Furthermore</b>, students face pressure from families. <b>However</b>, they can seek help.",
+        "extra": "不要只会用 and/but/so！高级连接词让文章逻辑更清晰，阅卷老师给高分",
+        "Source": "六级作文·写作技巧"
+    },
+    {
+        "front": "六级写作·现象解释型 完整范文背诵版",
+        "back": "In recent years, mental health issues among college students have become a widespread concern in society. Statistics show that an increasing number of students suffer from anxiety and depression during their academic years.<br><br>Several factors contribute to this phenomenon. Primarily, the fierce competition in the job market places enormous pressure on students. Furthermore, many students struggle to adapt to independent campus life, feeling isolated from their families. Additionally, the excessive use of social media has aggravated their psychological burden.<br><br>In conclusion, it is essential for universities to strengthen mental health education and provide professional counseling services. Meanwhile, students should learn to maintain a positive attitude and seek help when necessary. Only in this way can we build a healthier campus environment.",
+        "example": "【背诵技巧】先背框架，再填内容。框架：In recent years... → Several factors... → In conclusion...",
+        "extra": "全文约 120 词，符合六级作文字数要求（120-180词）<br>建议：每天读 3 遍，3 天背熟",
+        "Source": "六级作文·大学生心理健康"
+    }
+]

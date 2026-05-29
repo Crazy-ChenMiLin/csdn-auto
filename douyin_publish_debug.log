@@ -1,0 +1,9 @@
+CDP cookie injected: 23/23
+Traceback (most recent call last):
+  File "/home/node/.openclaw/workspace/skills-private/douyin-cookie-publisher/scripts/publish_douyin_article_with_cookie.py", line 197, in <module>
+    main()
+  File "/home/node/.openclaw/workspace/skills-private/douyin-cookie-publisher/scripts/publish_douyin_article_with_cookie.py", line 193, in main
+    publish_article(parser.parse_args())
+  File "/home/node/.openclaw/workspace/skills-private/douyin-cookie-publisher/scripts/publish_douyin_article_with_cookie.py", line 120, in publish_article
+    raise RuntimeError("Cookie did not restore Douyin Creator login state.")
+RuntimeError: Cookie did not restore Douyin Creator login state.

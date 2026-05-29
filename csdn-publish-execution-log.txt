@@ -1,0 +1,896 @@
+[2026-05-06T14:11:39.743Z] ========================================
+[2026-05-06T14:11:39.746Z] CSDN 博客发布自动化 - 改进版 v2
+[2026-05-06T14:11:39.746Z] 最大重试次数: 5
+[2026-05-06T14:11:39.746Z] ========================================
+
+[2026-05-06T14:11:39.746Z] 
+========== 第 1/5 次尝试 ==========
+[2026-05-06T14:11:39.747Z] 启动浏览器...
+[2026-05-06T14:11:40.641Z] 访问 https://mp.csdn.net/mp_blog/creation/editor?not_checkout=1&spm=1011.2415.3001.6192
+[2026-05-06T14:11:50.179Z] ✅ 页面加载成功
+[2026-05-06T14:11:50.180Z] 等待页面完全加载...
+[2026-05-06T14:12:05.824Z] 📸 初始截图已保存: attempt-1-initial.png
+[2026-05-06T14:12:05.824Z] 
+--- 步骤1: 填写标题 ---
+[2026-05-06T14:12:05.824Z] 尝试 标题 选择器 1/9: input[placeholder*="标题"]
+[2026-05-06T14:12:10.826Z] ❌ 选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[placeholder*="标题"]').first() to be visible[22m
+
+[2026-05-06T14:12:10.826Z] 尝试 标题 选择器 2/9: input[name*="title"]
+[2026-05-06T14:12:15.826Z] ❌ 选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[name*="title"]').first() to be visible[22m
+
+[2026-05-06T14:12:15.826Z] 尝试 标题 选择器 3/9: input[class*="title"]
+[2026-05-06T14:12:20.828Z] ❌ 选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[class*="title"]').first() to be visible[22m
+
+[2026-05-06T14:12:20.828Z] 尝试 标题 选择器 4/9: [data-testid*="title"]
+[2026-05-06T14:12:25.829Z] ❌ 选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="title"]').first() to be visible[22m
+
+[2026-05-06T14:12:25.829Z] 尝试 标题 选择器 5/9: input[type="text"]
+[2026-05-06T14:12:30.831Z] ❌ 选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[type="text"]').first() to be visible[22m
+
+[2026-05-06T14:12:30.832Z] 尝试 标题 选择器 6/9: .title-input input
+[2026-05-06T14:12:35.832Z] ❌ 选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.title-input input').first() to be visible[22m
+
+[2026-05-06T14:12:35.832Z] 尝试 标题 选择器 7/9: .blog-title input
+[2026-05-06T14:12:40.832Z] ❌ 选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.blog-title input').first() to be visible[22m
+
+[2026-05-06T14:12:40.832Z] 尝试 标题 选择器 8/9: div[contenteditable="true"]
+[2026-05-06T14:12:45.832Z] ❌ 选择器 8 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('div[contenteditable="true"]').first() to be visible[22m
+
+[2026-05-06T14:12:45.832Z] 尝试 标题 选择器 9/9: [role="textbox"]
+[2026-05-06T14:12:50.833Z] ❌ 选择器 9 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[role="textbox"]').first() to be visible[22m
+
+[2026-05-06T14:12:53.833Z] 
+--- 步骤2: 填写内容 ---
+[2026-05-06T14:12:53.833Z] 尝试 内容 选择器 1/10: textarea[placeholder*="内容"]
+[2026-05-06T14:12:58.834Z] ❌ 选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[placeholder*="内容"]').first() to be visible[22m
+
+[2026-05-06T14:12:58.834Z] 尝试 内容 选择器 2/10: textarea[name*="content"]
+[2026-05-06T14:13:03.834Z] ❌ 选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[name*="content"]').first() to be visible[22m
+
+[2026-05-06T14:13:03.834Z] 尝试 内容 选择器 3/10: textarea[class*="content"]
+[2026-05-06T14:13:08.834Z] ❌ 选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[class*="content"]').first() to be visible[22m
+
+[2026-05-06T14:13:08.835Z] 尝试 内容 选择器 4/10: [contenteditable="true"]
+[2026-05-06T14:13:13.835Z] ❌ 选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[contenteditable="true"]').first() to be visible[22m
+
+[2026-05-06T14:13:13.836Z] 尝试 内容 选择器 5/10: .editor-content
+[2026-05-06T14:13:18.837Z] ❌ 选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.editor-content').first() to be visible[22m
+
+[2026-05-06T14:13:18.837Z] 尝试 内容 选择器 6/10: .blog-content
+[2026-05-06T14:13:23.837Z] ❌ 选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.blog-content').first() to be visible[22m
+
+[2026-05-06T14:13:23.837Z] 尝试 内容 选择器 7/10: [data-testid*="content"]
+[2026-05-06T14:13:28.837Z] ❌ 选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="content"]').first() to be visible[22m
+
+[2026-05-06T14:13:28.838Z] 尝试 内容 选择器 8/10: div[role="textbox"]
+[2026-05-06T14:13:33.837Z] ❌ 选择器 8 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('div[role="textbox"]').first() to be visible[22m
+
+[2026-05-06T14:13:33.837Z] 尝试 内容 选择器 9/10: .CodeMirror textarea
+[2026-05-06T14:13:38.838Z] ❌ 选择器 9 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.CodeMirror textarea').first() to be visible[22m
+
+[2026-05-06T14:13:38.839Z] 尝试 内容 选择器 10/10: .md-editor textarea
+[2026-05-06T14:13:43.838Z] ❌ 选择器 10 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.md-editor textarea').first() to be visible[22m
+
+[2026-05-06T14:13:46.839Z] 
+--- 步骤3: 选择标签 ---
+[2026-05-06T14:13:46.839Z] 尝试标签选择器 1/4: input[placeholder*="标签"]
+[2026-05-06T14:13:51.840Z] ❌ 标签选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[placeholder*="标签"]').first() to be visible[22m
+
+[2026-05-06T14:13:51.841Z] 尝试标签选择器 2/4: .tag-input input
+[2026-05-06T14:13:56.840Z] ❌ 标签选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.tag-input input').first() to be visible[22m
+
+[2026-05-06T14:13:56.840Z] 尝试标签选择器 3/4: [data-testid*="tag"]
+[2026-05-06T14:14:01.840Z] ❌ 标签选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="tag"]').first() to be visible[22m
+
+[2026-05-06T14:14:01.840Z] 尝试标签选择器 4/4: input[class*="tag"]
+[2026-05-06T14:14:06.841Z] ❌ 标签选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[class*="tag"]').first() to be visible[22m
+
+[2026-05-06T14:14:08.842Z] 
+--- 步骤4: 点击发布 ---
+[2026-05-06T14:14:08.842Z] 尝试 发布按钮 点击选择器 1/7: button:has-text("发布")
+[2026-05-06T14:14:13.842Z] ❌ 点击选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("发布")').first() to be visible[22m
+
+[2026-05-06T14:14:13.842Z] 尝试 发布按钮 点击选择器 2/7: button:has-text("发表")
+[2026-05-06T14:14:18.842Z] ❌ 点击选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("发表")').first() to be visible[22m
+
+[2026-05-06T14:14:18.842Z] 尝试 发布按钮 点击选择器 3/7: button:has-text("提交")
+[2026-05-06T14:14:23.842Z] ❌ 点击选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("提交")').first() to be visible[22m
+
+[2026-05-06T14:14:23.842Z] 尝试 发布按钮 点击选择器 4/7: .publish-btn
+[2026-05-06T14:14:28.842Z] ❌ 点击选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.publish-btn').first() to be visible[22m
+
+[2026-05-06T14:14:28.842Z] 尝试 发布按钮 点击选择器 5/7: [data-testid*="publish"]
+[2026-05-06T14:14:33.843Z] ❌ 点击选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="publish"]').first() to be visible[22m
+
+[2026-05-06T14:14:33.843Z] 尝试 发布按钮 点击选择器 6/7: button[class*="publish"]
+[2026-05-06T14:14:38.843Z] ❌ 点击选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button[class*="publish"]').first() to be visible[22m
+
+[2026-05-06T14:14:38.844Z] 尝试 发布按钮 点击选择器 7/7: button[type="submit"]
+[2026-05-06T14:14:43.844Z] ❌ 点击选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button[type="submit"]').first() to be visible[22m
+
+[2026-05-06T14:14:49.474Z] 📸 最终截图已保存: attempt-1-final.png
+[2026-05-06T14:14:49.612Z] ✅ 第 1 次尝试完成
+[2026-05-06T14:14:49.612Z] 
+⏳ 等待 3000ms 后进行下一次尝试...
+[2026-05-06T14:14:52.615Z] 
+========== 第 2/5 次尝试 ==========
+[2026-05-06T14:14:52.615Z] 启动浏览器...
+[2026-05-06T14:14:53.055Z] 访问 https://mp.csdn.net/mp_blog/creation/editor?not_checkout=1&spm=1011.2415.3001.6192
+[2026-05-06T14:15:01.180Z] ✅ 页面加载成功
+[2026-05-06T14:15:01.180Z] 等待页面完全加载...
+[2026-05-06T14:15:16.813Z] 📸 初始截图已保存: attempt-2-initial.png
+[2026-05-06T14:15:16.813Z] 
+--- 步骤1: 填写标题 ---
+[2026-05-06T14:15:16.813Z] 尝试 标题 选择器 1/9: input[placeholder*="标题"]
+[2026-05-06T14:15:21.814Z] ❌ 选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[placeholder*="标题"]').first() to be visible[22m
+
+[2026-05-06T14:15:21.814Z] 尝试 标题 选择器 2/9: input[name*="title"]
+[2026-05-06T14:15:26.815Z] ❌ 选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[name*="title"]').first() to be visible[22m
+
+[2026-05-06T14:15:26.816Z] 尝试 标题 选择器 3/9: input[class*="title"]
+[2026-05-06T14:15:31.817Z] ❌ 选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[class*="title"]').first() to be visible[22m
+
+[2026-05-06T14:15:31.817Z] 尝试 标题 选择器 4/9: [data-testid*="title"]
+[2026-05-06T14:15:36.817Z] ❌ 选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="title"]').first() to be visible[22m
+
+[2026-05-06T14:15:36.817Z] 尝试 标题 选择器 5/9: input[type="text"]
+[2026-05-06T14:15:41.817Z] ❌ 选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[type="text"]').first() to be visible[22m
+
+[2026-05-06T14:15:41.817Z] 尝试 标题 选择器 6/9: .title-input input
+[2026-05-06T14:15:46.817Z] ❌ 选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.title-input input').first() to be visible[22m
+
+[2026-05-06T14:15:46.817Z] 尝试 标题 选择器 7/9: .blog-title input
+[2026-05-06T14:15:51.818Z] ❌ 选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.blog-title input').first() to be visible[22m
+
+[2026-05-06T14:15:51.818Z] 尝试 标题 选择器 8/9: div[contenteditable="true"]
+[2026-05-06T14:15:56.818Z] ❌ 选择器 8 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('div[contenteditable="true"]').first() to be visible[22m
+
+[2026-05-06T14:15:56.818Z] 尝试 标题 选择器 9/9: [role="textbox"]
+[2026-05-06T14:16:01.819Z] ❌ 选择器 9 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[role="textbox"]').first() to be visible[22m
+
+[2026-05-06T14:16:04.820Z] 
+--- 步骤2: 填写内容 ---
+[2026-05-06T14:16:04.820Z] 尝试 内容 选择器 1/10: textarea[placeholder*="内容"]
+[2026-05-06T14:16:09.821Z] ❌ 选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[placeholder*="内容"]').first() to be visible[22m
+
+[2026-05-06T14:16:09.821Z] 尝试 内容 选择器 2/10: textarea[name*="content"]
+[2026-05-06T14:16:14.823Z] ❌ 选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[name*="content"]').first() to be visible[22m
+
+[2026-05-06T14:16:14.824Z] 尝试 内容 选择器 3/10: textarea[class*="content"]
+[2026-05-06T14:16:19.824Z] ❌ 选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[class*="content"]').first() to be visible[22m
+
+[2026-05-06T14:16:19.824Z] 尝试 内容 选择器 4/10: [contenteditable="true"]
+[2026-05-06T14:16:24.825Z] ❌ 选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[contenteditable="true"]').first() to be visible[22m
+
+[2026-05-06T14:16:24.825Z] 尝试 内容 选择器 5/10: .editor-content
+[2026-05-06T14:16:29.825Z] ❌ 选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.editor-content').first() to be visible[22m
+
+[2026-05-06T14:16:29.825Z] 尝试 内容 选择器 6/10: .blog-content
+[2026-05-06T14:16:34.825Z] ❌ 选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.blog-content').first() to be visible[22m
+
+[2026-05-06T14:16:34.825Z] 尝试 内容 选择器 7/10: [data-testid*="content"]
+[2026-05-06T14:16:39.826Z] ❌ 选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="content"]').first() to be visible[22m
+
+[2026-05-06T14:16:39.826Z] 尝试 内容 选择器 8/10: div[role="textbox"]
+[2026-05-06T14:16:44.825Z] ❌ 选择器 8 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('div[role="textbox"]').first() to be visible[22m
+
+[2026-05-06T14:16:44.826Z] 尝试 内容 选择器 9/10: .CodeMirror textarea
+[2026-05-06T14:16:49.825Z] ❌ 选择器 9 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.CodeMirror textarea').first() to be visible[22m
+
+[2026-05-06T14:16:49.825Z] 尝试 内容 选择器 10/10: .md-editor textarea
+[2026-05-06T14:16:54.825Z] ❌ 选择器 10 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.md-editor textarea').first() to be visible[22m
+
+[2026-05-06T14:16:57.825Z] 
+--- 步骤3: 选择标签 ---
+[2026-05-06T14:16:57.825Z] 尝试标签选择器 1/4: input[placeholder*="标签"]
+[2026-05-06T14:17:02.825Z] ❌ 标签选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[placeholder*="标签"]').first() to be visible[22m
+
+[2026-05-06T14:17:02.825Z] 尝试标签选择器 2/4: .tag-input input
+[2026-05-06T14:17:07.826Z] ❌ 标签选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.tag-input input').first() to be visible[22m
+
+[2026-05-06T14:17:07.826Z] 尝试标签选择器 3/4: [data-testid*="tag"]
+[2026-05-06T14:17:12.827Z] ❌ 标签选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="tag"]').first() to be visible[22m
+
+[2026-05-06T14:17:12.827Z] 尝试标签选择器 4/4: input[class*="tag"]
+[2026-05-06T14:17:17.827Z] ❌ 标签选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[class*="tag"]').first() to be visible[22m
+
+[2026-05-06T14:17:19.828Z] 
+--- 步骤4: 点击发布 ---
+[2026-05-06T14:17:19.828Z] 尝试 发布按钮 点击选择器 1/7: button:has-text("发布")
+[2026-05-06T14:17:24.829Z] ❌ 点击选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("发布")').first() to be visible[22m
+
+[2026-05-06T14:17:24.829Z] 尝试 发布按钮 点击选择器 2/7: button:has-text("发表")
+[2026-05-06T14:17:29.831Z] ❌ 点击选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("发表")').first() to be visible[22m
+
+[2026-05-06T14:17:29.831Z] 尝试 发布按钮 点击选择器 3/7: button:has-text("提交")
+[2026-05-06T14:17:34.831Z] ❌ 点击选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("提交")').first() to be visible[22m
+
+[2026-05-06T14:17:34.832Z] 尝试 发布按钮 点击选择器 4/7: .publish-btn
+[2026-05-06T14:17:39.832Z] ❌ 点击选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.publish-btn').first() to be visible[22m
+
+[2026-05-06T14:17:39.833Z] 尝试 发布按钮 点击选择器 5/7: [data-testid*="publish"]
+[2026-05-06T14:17:44.832Z] ❌ 点击选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="publish"]').first() to be visible[22m
+
+[2026-05-06T14:17:44.832Z] 尝试 发布按钮 点击选择器 6/7: button[class*="publish"]
+[2026-05-06T14:17:49.833Z] ❌ 点击选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button[class*="publish"]').first() to be visible[22m
+
+[2026-05-06T14:17:49.833Z] 尝试 发布按钮 点击选择器 7/7: button[type="submit"]
+[2026-05-06T14:17:54.833Z] ❌ 点击选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button[type="submit"]').first() to be visible[22m
+
+[2026-05-06T14:18:00.429Z] 📸 最终截图已保存: attempt-2-final.png
+[2026-05-06T14:18:00.514Z] ✅ 第 2 次尝试完成
+[2026-05-06T14:18:00.514Z] 
+⏳ 等待 3000ms 后进行下一次尝试...
+[2026-05-06T14:18:03.516Z] 
+========== 第 3/5 次尝试 ==========
+[2026-05-06T14:18:03.516Z] 启动浏览器...
+[2026-05-06T14:18:03.860Z] 访问 https://mp.csdn.net/mp_blog/creation/editor?not_checkout=1&spm=1011.2415.3001.6192
+[2026-05-06T14:18:12.207Z] ✅ 页面加载成功
+[2026-05-06T14:18:12.208Z] 等待页面完全加载...
+[2026-05-06T14:18:27.827Z] 📸 初始截图已保存: attempt-3-initial.png
+[2026-05-06T14:18:27.828Z] 
+--- 步骤1: 填写标题 ---
+[2026-05-06T14:18:27.828Z] 尝试 标题 选择器 1/9: input[placeholder*="标题"]
+[2026-05-06T14:18:32.834Z] ❌ 选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[placeholder*="标题"]').first() to be visible[22m
+
+[2026-05-06T14:18:32.834Z] 尝试 标题 选择器 2/9: input[name*="title"]
+[2026-05-06T14:18:37.834Z] ❌ 选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[name*="title"]').first() to be visible[22m
+
+[2026-05-06T14:18:37.835Z] 尝试 标题 选择器 3/9: input[class*="title"]
+[2026-05-06T14:18:42.834Z] ❌ 选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[class*="title"]').first() to be visible[22m
+
+[2026-05-06T14:18:42.834Z] 尝试 标题 选择器 4/9: [data-testid*="title"]
+[2026-05-06T14:18:47.834Z] ❌ 选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="title"]').first() to be visible[22m
+
+[2026-05-06T14:18:47.834Z] 尝试 标题 选择器 5/9: input[type="text"]
+[2026-05-06T14:18:52.834Z] ❌ 选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[type="text"]').first() to be visible[22m
+
+[2026-05-06T14:18:52.834Z] 尝试 标题 选择器 6/9: .title-input input
+[2026-05-06T14:18:57.834Z] ❌ 选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.title-input input').first() to be visible[22m
+
+[2026-05-06T14:18:57.834Z] 尝试 标题 选择器 7/9: .blog-title input
+[2026-05-06T14:19:02.834Z] ❌ 选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.blog-title input').first() to be visible[22m
+
+[2026-05-06T14:19:02.835Z] 尝试 标题 选择器 8/9: div[contenteditable="true"]
+[2026-05-06T14:19:07.835Z] ❌ 选择器 8 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('div[contenteditable="true"]').first() to be visible[22m
+
+[2026-05-06T14:19:07.836Z] 尝试 标题 选择器 9/9: [role="textbox"]
+[2026-05-06T14:19:12.838Z] ❌ 选择器 9 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[role="textbox"]').first() to be visible[22m
+
+[2026-05-06T14:19:15.838Z] 
+--- 步骤2: 填写内容 ---
+[2026-05-06T14:19:15.838Z] 尝试 内容 选择器 1/10: textarea[placeholder*="内容"]
+[2026-05-06T14:19:20.838Z] ❌ 选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[placeholder*="内容"]').first() to be visible[22m
+
+[2026-05-06T14:19:20.838Z] 尝试 内容 选择器 2/10: textarea[name*="content"]
+[2026-05-06T14:19:25.838Z] ❌ 选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[name*="content"]').first() to be visible[22m
+
+[2026-05-06T14:19:25.838Z] 尝试 内容 选择器 3/10: textarea[class*="content"]
+[2026-05-06T14:19:30.838Z] ❌ 选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[class*="content"]').first() to be visible[22m
+
+[2026-05-06T14:19:30.838Z] 尝试 内容 选择器 4/10: [contenteditable="true"]
+[2026-05-06T14:19:35.838Z] ❌ 选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[contenteditable="true"]').first() to be visible[22m
+
+[2026-05-06T14:19:35.838Z] 尝试 内容 选择器 5/10: .editor-content
+[2026-05-06T14:19:40.838Z] ❌ 选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.editor-content').first() to be visible[22m
+
+[2026-05-06T14:19:40.838Z] 尝试 内容 选择器 6/10: .blog-content
+[2026-05-06T14:19:45.838Z] ❌ 选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.blog-content').first() to be visible[22m
+
+[2026-05-06T14:19:45.838Z] 尝试 内容 选择器 7/10: [data-testid*="content"]
+[2026-05-06T14:19:50.838Z] ❌ 选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="content"]').first() to be visible[22m
+
+[2026-05-06T14:19:50.839Z] 尝试 内容 选择器 8/10: div[role="textbox"]
+[2026-05-06T14:19:55.838Z] ❌ 选择器 8 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('div[role="textbox"]').first() to be visible[22m
+
+[2026-05-06T14:19:55.838Z] 尝试 内容 选择器 9/10: .CodeMirror textarea
+[2026-05-06T14:20:00.838Z] ❌ 选择器 9 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.CodeMirror textarea').first() to be visible[22m
+
+[2026-05-06T14:20:00.838Z] 尝试 内容 选择器 10/10: .md-editor textarea
+[2026-05-06T14:20:05.838Z] ❌ 选择器 10 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.md-editor textarea').first() to be visible[22m
+
+[2026-05-06T14:20:08.839Z] 
+--- 步骤3: 选择标签 ---
+[2026-05-06T14:20:08.839Z] 尝试标签选择器 1/4: input[placeholder*="标签"]
+[2026-05-06T14:20:13.840Z] ❌ 标签选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[placeholder*="标签"]').first() to be visible[22m
+
+[2026-05-06T14:20:13.841Z] 尝试标签选择器 2/4: .tag-input input
+[2026-05-06T14:20:18.840Z] ❌ 标签选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.tag-input input').first() to be visible[22m
+
+[2026-05-06T14:20:18.840Z] 尝试标签选择器 3/4: [data-testid*="tag"]
+[2026-05-06T14:20:23.840Z] ❌ 标签选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="tag"]').first() to be visible[22m
+
+[2026-05-06T14:20:23.841Z] 尝试标签选择器 4/4: input[class*="tag"]
+[2026-05-06T14:20:28.841Z] ❌ 标签选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[class*="tag"]').first() to be visible[22m
+
+[2026-05-06T14:20:30.842Z] 
+--- 步骤4: 点击发布 ---
+[2026-05-06T14:20:30.842Z] 尝试 发布按钮 点击选择器 1/7: button:has-text("发布")
+[2026-05-06T14:20:35.843Z] ❌ 点击选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("发布")').first() to be visible[22m
+
+[2026-05-06T14:20:35.843Z] 尝试 发布按钮 点击选择器 2/7: button:has-text("发表")
+[2026-05-06T14:20:40.843Z] ❌ 点击选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("发表")').first() to be visible[22m
+
+[2026-05-06T14:20:40.843Z] 尝试 发布按钮 点击选择器 3/7: button:has-text("提交")
+[2026-05-06T14:20:45.843Z] ❌ 点击选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("提交")').first() to be visible[22m
+
+[2026-05-06T14:20:45.844Z] 尝试 发布按钮 点击选择器 4/7: .publish-btn
+[2026-05-06T14:20:50.844Z] ❌ 点击选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.publish-btn').first() to be visible[22m
+
+[2026-05-06T14:20:50.844Z] 尝试 发布按钮 点击选择器 5/7: [data-testid*="publish"]
+[2026-05-06T14:20:55.844Z] ❌ 点击选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="publish"]').first() to be visible[22m
+
+[2026-05-06T14:20:55.844Z] 尝试 发布按钮 点击选择器 6/7: button[class*="publish"]
+[2026-05-06T14:21:00.843Z] ❌ 点击选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button[class*="publish"]').first() to be visible[22m
+
+[2026-05-06T14:21:00.843Z] 尝试 发布按钮 点击选择器 7/7: button[type="submit"]
+[2026-05-06T14:21:05.843Z] ❌ 点击选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button[type="submit"]').first() to be visible[22m
+
+[2026-05-06T14:21:11.912Z] 📸 最终截图已保存: attempt-3-final.png
+[2026-05-06T14:21:12.052Z] ✅ 第 3 次尝试完成
+[2026-05-06T14:21:12.053Z] 
+⏳ 等待 3000ms 后进行下一次尝试...
+[2026-05-06T14:21:15.056Z] 
+========== 第 4/5 次尝试 ==========
+[2026-05-06T14:21:15.056Z] 启动浏览器...
+[2026-05-06T14:21:15.352Z] 访问 https://mp.csdn.net/mp_blog/creation/editor?not_checkout=1&spm=1011.2415.3001.6192
+[2026-05-06T14:21:24.838Z] ✅ 页面加载成功
+[2026-05-06T14:21:24.838Z] 等待页面完全加载...
+[2026-05-06T14:21:40.437Z] 📸 初始截图已保存: attempt-4-initial.png
+[2026-05-06T14:21:40.437Z] 
+--- 步骤1: 填写标题 ---
+[2026-05-06T14:21:40.437Z] 尝试 标题 选择器 1/9: input[placeholder*="标题"]
+[2026-05-06T14:21:45.437Z] ❌ 选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[placeholder*="标题"]').first() to be visible[22m
+
+[2026-05-06T14:21:45.437Z] 尝试 标题 选择器 2/9: input[name*="title"]
+[2026-05-06T14:21:50.437Z] ❌ 选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[name*="title"]').first() to be visible[22m
+
+[2026-05-06T14:21:50.438Z] 尝试 标题 选择器 3/9: input[class*="title"]
+[2026-05-06T14:21:55.437Z] ❌ 选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[class*="title"]').first() to be visible[22m
+
+[2026-05-06T14:21:55.437Z] 尝试 标题 选择器 4/9: [data-testid*="title"]
+[2026-05-06T14:22:00.438Z] ❌ 选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="title"]').first() to be visible[22m
+
+[2026-05-06T14:22:00.439Z] 尝试 标题 选择器 5/9: input[type="text"]
+[2026-05-06T14:22:05.439Z] ❌ 选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[type="text"]').first() to be visible[22m
+
+[2026-05-06T14:22:05.439Z] 尝试 标题 选择器 6/9: .title-input input
+[2026-05-06T14:22:10.439Z] ❌ 选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.title-input input').first() to be visible[22m
+
+[2026-05-06T14:22:10.439Z] 尝试 标题 选择器 7/9: .blog-title input
+[2026-05-06T14:22:15.441Z] ❌ 选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.blog-title input').first() to be visible[22m
+
+[2026-05-06T14:22:15.441Z] 尝试 标题 选择器 8/9: div[contenteditable="true"]
+[2026-05-06T14:22:20.443Z] ❌ 选择器 8 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('div[contenteditable="true"]').first() to be visible[22m
+
+[2026-05-06T14:22:20.443Z] 尝试 标题 选择器 9/9: [role="textbox"]
+[2026-05-06T14:22:25.445Z] ❌ 选择器 9 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[role="textbox"]').first() to be visible[22m
+
+[2026-05-06T14:22:28.445Z] 
+--- 步骤2: 填写内容 ---
+[2026-05-06T14:22:28.445Z] 尝试 内容 选择器 1/10: textarea[placeholder*="内容"]
+[2026-05-06T14:22:33.446Z] ❌ 选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[placeholder*="内容"]').first() to be visible[22m
+
+[2026-05-06T14:22:33.446Z] 尝试 内容 选择器 2/10: textarea[name*="content"]
+[2026-05-06T14:22:38.447Z] ❌ 选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[name*="content"]').first() to be visible[22m
+
+[2026-05-06T14:22:38.447Z] 尝试 内容 选择器 3/10: textarea[class*="content"]
+[2026-05-06T14:22:43.447Z] ❌ 选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[class*="content"]').first() to be visible[22m
+
+[2026-05-06T14:22:43.447Z] 尝试 内容 选择器 4/10: [contenteditable="true"]
+[2026-05-06T14:22:48.447Z] ❌ 选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[contenteditable="true"]').first() to be visible[22m
+
+[2026-05-06T14:22:48.447Z] 尝试 内容 选择器 5/10: .editor-content
+[2026-05-06T14:22:53.448Z] ❌ 选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.editor-content').first() to be visible[22m
+
+[2026-05-06T14:22:53.448Z] 尝试 内容 选择器 6/10: .blog-content
+[2026-05-06T14:22:58.448Z] ❌ 选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.blog-content').first() to be visible[22m
+
+[2026-05-06T14:22:58.448Z] 尝试 内容 选择器 7/10: [data-testid*="content"]
+[2026-05-06T14:23:03.449Z] ❌ 选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="content"]').first() to be visible[22m
+
+[2026-05-06T14:23:03.449Z] 尝试 内容 选择器 8/10: div[role="textbox"]
+[2026-05-06T14:23:08.449Z] ❌ 选择器 8 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('div[role="textbox"]').first() to be visible[22m
+
+[2026-05-06T14:23:08.449Z] 尝试 内容 选择器 9/10: .CodeMirror textarea
+[2026-05-06T14:23:13.449Z] ❌ 选择器 9 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.CodeMirror textarea').first() to be visible[22m
+
+[2026-05-06T14:23:13.449Z] 尝试 内容 选择器 10/10: .md-editor textarea
+[2026-05-06T14:23:18.449Z] ❌ 选择器 10 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.md-editor textarea').first() to be visible[22m
+
+[2026-05-06T14:23:21.451Z] 
+--- 步骤3: 选择标签 ---
+[2026-05-06T14:23:21.451Z] 尝试标签选择器 1/4: input[placeholder*="标签"]
+[2026-05-06T14:23:26.451Z] ❌ 标签选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[placeholder*="标签"]').first() to be visible[22m
+
+[2026-05-06T14:23:26.452Z] 尝试标签选择器 2/4: .tag-input input
+[2026-05-06T14:23:31.451Z] ❌ 标签选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.tag-input input').first() to be visible[22m
+
+[2026-05-06T14:23:31.451Z] 尝试标签选择器 3/4: [data-testid*="tag"]
+[2026-05-06T14:23:36.451Z] ❌ 标签选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="tag"]').first() to be visible[22m
+
+[2026-05-06T14:23:36.451Z] 尝试标签选择器 4/4: input[class*="tag"]
+[2026-05-06T14:23:41.451Z] ❌ 标签选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[class*="tag"]').first() to be visible[22m
+
+[2026-05-06T14:23:43.452Z] 
+--- 步骤4: 点击发布 ---
+[2026-05-06T14:23:43.452Z] 尝试 发布按钮 点击选择器 1/7: button:has-text("发布")
+[2026-05-06T14:23:48.455Z] ❌ 点击选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("发布")').first() to be visible[22m
+
+[2026-05-06T14:23:48.456Z] 尝试 发布按钮 点击选择器 2/7: button:has-text("发表")
+[2026-05-06T14:23:53.459Z] ❌ 点击选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("发表")').first() to be visible[22m
+
+[2026-05-06T14:23:53.459Z] 尝试 发布按钮 点击选择器 3/7: button:has-text("提交")
+[2026-05-06T14:23:58.459Z] ❌ 点击选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("提交")').first() to be visible[22m
+
+[2026-05-06T14:23:58.459Z] 尝试 发布按钮 点击选择器 4/7: .publish-btn
+[2026-05-06T14:24:03.460Z] ❌ 点击选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.publish-btn').first() to be visible[22m
+
+[2026-05-06T14:24:03.460Z] 尝试 发布按钮 点击选择器 5/7: [data-testid*="publish"]
+[2026-05-06T14:24:08.459Z] ❌ 点击选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="publish"]').first() to be visible[22m
+
+[2026-05-06T14:24:08.460Z] 尝试 发布按钮 点击选择器 6/7: button[class*="publish"]
+[2026-05-06T14:24:13.460Z] ❌ 点击选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button[class*="publish"]').first() to be visible[22m
+
+[2026-05-06T14:24:13.461Z] 尝试 发布按钮 点击选择器 7/7: button[type="submit"]
+[2026-05-06T14:24:18.462Z] ❌ 点击选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button[type="submit"]').first() to be visible[22m
+
+[2026-05-06T14:24:24.078Z] 📸 最终截图已保存: attempt-4-final.png
+[2026-05-06T14:24:24.218Z] ✅ 第 4 次尝试完成
+[2026-05-06T14:24:24.218Z] 
+⏳ 等待 3000ms 后进行下一次尝试...
+[2026-05-06T14:24:27.221Z] 
+========== 第 5/5 次尝试 ==========
+[2026-05-06T14:24:27.222Z] 启动浏览器...
+[2026-05-06T14:24:27.556Z] 访问 https://mp.csdn.net/mp_blog/creation/editor?not_checkout=1&spm=1011.2415.3001.6192
+[2026-05-06T14:24:36.209Z] ✅ 页面加载成功
+[2026-05-06T14:24:36.209Z] 等待页面完全加载...
+[2026-05-06T14:24:51.848Z] 📸 初始截图已保存: attempt-5-initial.png
+[2026-05-06T14:24:51.848Z] 
+--- 步骤1: 填写标题 ---
+[2026-05-06T14:24:51.848Z] 尝试 标题 选择器 1/9: input[placeholder*="标题"]
+[2026-05-06T14:24:56.848Z] ❌ 选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[placeholder*="标题"]').first() to be visible[22m
+
+[2026-05-06T14:24:56.849Z] 尝试 标题 选择器 2/9: input[name*="title"]
+[2026-05-06T14:25:01.849Z] ❌ 选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[name*="title"]').first() to be visible[22m
+
+[2026-05-06T14:25:01.849Z] 尝试 标题 选择器 3/9: input[class*="title"]
+[2026-05-06T14:25:06.849Z] ❌ 选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[class*="title"]').first() to be visible[22m
+
+[2026-05-06T14:25:06.849Z] 尝试 标题 选择器 4/9: [data-testid*="title"]
+[2026-05-06T14:25:11.849Z] ❌ 选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="title"]').first() to be visible[22m
+
+[2026-05-06T14:25:11.849Z] 尝试 标题 选择器 5/9: input[type="text"]
+[2026-05-06T14:25:16.849Z] ❌ 选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[type="text"]').first() to be visible[22m
+
+[2026-05-06T14:25:16.849Z] 尝试 标题 选择器 6/9: .title-input input
+[2026-05-06T14:25:21.849Z] ❌ 选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.title-input input').first() to be visible[22m
+
+[2026-05-06T14:25:21.849Z] 尝试 标题 选择器 7/9: .blog-title input
+[2026-05-06T14:25:26.849Z] ❌ 选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.blog-title input').first() to be visible[22m
+
+[2026-05-06T14:25:26.849Z] 尝试 标题 选择器 8/9: div[contenteditable="true"]
+[2026-05-06T14:25:31.850Z] ❌ 选择器 8 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('div[contenteditable="true"]').first() to be visible[22m
+
+[2026-05-06T14:25:31.850Z] 尝试 标题 选择器 9/9: [role="textbox"]
+[2026-05-06T14:25:36.850Z] ❌ 选择器 9 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[role="textbox"]').first() to be visible[22m
+
+[2026-05-06T14:25:39.851Z] 
+--- 步骤2: 填写内容 ---
+[2026-05-06T14:25:39.851Z] 尝试 内容 选择器 1/10: textarea[placeholder*="内容"]
+[2026-05-06T14:25:44.851Z] ❌ 选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[placeholder*="内容"]').first() to be visible[22m
+
+[2026-05-06T14:25:44.852Z] 尝试 内容 选择器 2/10: textarea[name*="content"]
+[2026-05-06T14:25:49.852Z] ❌ 选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[name*="content"]').first() to be visible[22m
+
+[2026-05-06T14:25:49.852Z] 尝试 内容 选择器 3/10: textarea[class*="content"]
+[2026-05-06T14:25:54.853Z] ❌ 选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea[class*="content"]').first() to be visible[22m
+
+[2026-05-06T14:25:54.854Z] 尝试 内容 选择器 4/10: [contenteditable="true"]
+[2026-05-06T14:25:59.854Z] ❌ 选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[contenteditable="true"]').first() to be visible[22m
+
+[2026-05-06T14:25:59.854Z] 尝试 内容 选择器 5/10: .editor-content
+[2026-05-06T14:26:04.854Z] ❌ 选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.editor-content').first() to be visible[22m
+
+[2026-05-06T14:26:04.854Z] 尝试 内容 选择器 6/10: .blog-content
+[2026-05-06T14:26:09.854Z] ❌ 选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.blog-content').first() to be visible[22m
+
+[2026-05-06T14:26:09.854Z] 尝试 内容 选择器 7/10: [data-testid*="content"]
+[2026-05-06T14:26:14.854Z] ❌ 选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="content"]').first() to be visible[22m
+
+[2026-05-06T14:26:14.854Z] 尝试 内容 选择器 8/10: div[role="textbox"]
+[2026-05-06T14:26:19.854Z] ❌ 选择器 8 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('div[role="textbox"]').first() to be visible[22m
+
+[2026-05-06T14:26:19.854Z] 尝试 内容 选择器 9/10: .CodeMirror textarea
+[2026-05-06T14:26:24.855Z] ❌ 选择器 9 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.CodeMirror textarea').first() to be visible[22m
+
+[2026-05-06T14:26:24.855Z] 尝试 内容 选择器 10/10: .md-editor textarea
+[2026-05-06T14:26:29.854Z] ❌ 选择器 10 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.md-editor textarea').first() to be visible[22m
+
+[2026-05-06T14:26:32.855Z] 
+--- 步骤3: 选择标签 ---
+[2026-05-06T14:26:32.855Z] 尝试标签选择器 1/4: input[placeholder*="标签"]
+[2026-05-06T14:26:37.855Z] ❌ 标签选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[placeholder*="标签"]').first() to be visible[22m
+
+[2026-05-06T14:26:37.855Z] 尝试标签选择器 2/4: .tag-input input
+[2026-05-06T14:26:42.855Z] ❌ 标签选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.tag-input input').first() to be visible[22m
+
+[2026-05-06T14:26:42.856Z] 尝试标签选择器 3/4: [data-testid*="tag"]
+[2026-05-06T14:26:47.858Z] ❌ 标签选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="tag"]').first() to be visible[22m
+
+[2026-05-06T14:26:47.858Z] 尝试标签选择器 4/4: input[class*="tag"]
+[2026-05-06T14:26:52.859Z] ❌ 标签选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[class*="tag"]').first() to be visible[22m
+
+[2026-05-06T14:26:54.860Z] 
+--- 步骤4: 点击发布 ---
+[2026-05-06T14:26:54.860Z] 尝试 发布按钮 点击选择器 1/7: button:has-text("发布")
+[2026-05-06T14:26:59.861Z] ❌ 点击选择器 1 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("发布")').first() to be visible[22m
+
+[2026-05-06T14:26:59.861Z] 尝试 发布按钮 点击选择器 2/7: button:has-text("发表")
+[2026-05-06T14:27:04.861Z] ❌ 点击选择器 2 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("发表")').first() to be visible[22m
+
+[2026-05-06T14:27:04.861Z] 尝试 发布按钮 点击选择器 3/7: button:has-text("提交")
+[2026-05-06T14:27:09.861Z] ❌ 点击选择器 3 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("提交")').first() to be visible[22m
+
+[2026-05-06T14:27:09.861Z] 尝试 发布按钮 点击选择器 4/7: .publish-btn
+[2026-05-06T14:27:14.861Z] ❌ 点击选择器 4 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.publish-btn').first() to be visible[22m
+
+[2026-05-06T14:27:14.861Z] 尝试 发布按钮 点击选择器 5/7: [data-testid*="publish"]
+[2026-05-06T14:27:19.862Z] ❌ 点击选择器 5 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-testid*="publish"]').first() to be visible[22m
+
+[2026-05-06T14:27:19.862Z] 尝试 发布按钮 点击选择器 6/7: button[class*="publish"]
+[2026-05-06T14:27:24.862Z] ❌ 点击选择器 6 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button[class*="publish"]').first() to be visible[22m
+
+[2026-05-06T14:27:24.862Z] 尝试 发布按钮 点击选择器 7/7: button[type="submit"]
+[2026-05-06T14:27:29.862Z] ❌ 点击选择器 7 失败: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('button[type="submit"]').first() to be visible[22m
+
+[2026-05-06T14:27:35.487Z] 📸 最终截图已保存: attempt-5-final.png
+[2026-05-06T14:27:35.609Z] ✅ 第 5 次尝试完成
+[2026-05-06T14:27:35.609Z] 
+========================================
+[2026-05-06T14:27:35.609Z] 执行结果汇总
+[2026-05-06T14:27:35.609Z] ========================================
+[2026-05-06T14:27:35.610Z] 
+尝试 1: ❌ 失败
+[2026-05-06T14:27:35.610Z]   - 页面加载: ✅
+[2026-05-06T14:27:35.610Z]   - 标题填写: ❌
+[2026-05-06T14:27:35.610Z]   - 内容填写: ❌
+[2026-05-06T14:27:35.610Z]   - 标签选择: ❌
+[2026-05-06T14:27:35.610Z]   - 发布点击: ❌
+[2026-05-06T14:27:35.610Z]   - 错误: 所有标题选择器均失败, 所有内容选择器均失败, 所有标签选择器均失败, 所有发布按钮选择器均失败
+[2026-05-06T14:27:35.610Z] 
+尝试 2: ❌ 失败
+[2026-05-06T14:27:35.610Z]   - 页面加载: ✅
+[2026-05-06T14:27:35.610Z]   - 标题填写: ❌
+[2026-05-06T14:27:35.610Z]   - 内容填写: ❌
+[2026-05-06T14:27:35.610Z]   - 标签选择: ❌
+[2026-05-06T14:27:35.610Z]   - 发布点击: ❌
+[2026-05-06T14:27:35.610Z]   - 错误: 所有标题选择器均失败, 所有内容选择器均失败, 所有标签选择器均失败, 所有发布按钮选择器均失败
+[2026-05-06T14:27:35.610Z] 
+尝试 3: ❌ 失败
+[2026-05-06T14:27:35.610Z]   - 页面加载: ✅
+[2026-05-06T14:27:35.610Z]   - 标题填写: ❌
+[2026-05-06T14:27:35.610Z]   - 内容填写: ❌
+[2026-05-06T14:27:35.610Z]   - 标签选择: ❌
+[2026-05-06T14:27:35.610Z]   - 发布点击: ❌
+[2026-05-06T14:27:35.610Z]   - 错误: 所有标题选择器均失败, 所有内容选择器均失败, 所有标签选择器均失败, 所有发布按钮选择器均失败
+[2026-05-06T14:27:35.610Z] 
+尝试 4: ❌ 失败
+[2026-05-06T14:27:35.610Z]   - 页面加载: ✅
+[2026-05-06T14:27:35.610Z]   - 标题填写: ❌
+[2026-05-06T14:27:35.610Z]   - 内容填写: ❌
+[2026-05-06T14:27:35.610Z]   - 标签选择: ❌
+[2026-05-06T14:27:35.610Z]   - 发布点击: ❌
+[2026-05-06T14:27:35.610Z]   - 错误: 所有标题选择器均失败, 所有内容选择器均失败, 所有标签选择器均失败, 所有发布按钮选择器均失败
+[2026-05-06T14:27:35.610Z] 
+尝试 5: ❌ 失败
+[2026-05-06T14:27:35.610Z]   - 页面加载: ✅
+[2026-05-06T14:27:35.610Z]   - 标题填写: ❌
+[2026-05-06T14:27:35.610Z]   - 内容填写: ❌
+[2026-05-06T14:27:35.610Z]   - 标签选择: ❌
+[2026-05-06T14:27:35.610Z]   - 发布点击: ❌
+[2026-05-06T14:27:35.610Z]   - 错误: 所有标题选择器均失败, 所有内容选择器均失败, 所有标签选择器均失败, 所有发布按钮选择器均失败
+[2026-05-06T14:27:35.610Z] 
+========================================
+[2026-05-06T14:27:35.611Z] 总体结果: 0/5 次尝试完全成功
+[2026-05-06T14:27:35.611Z] ========================================

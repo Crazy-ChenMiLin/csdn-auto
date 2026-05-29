@@ -1,0 +1,138 @@
+[
+    {
+        "front": "Redis String 类型最大能存储多大的数据？",
+        "back": "最大 <b>512MB</b>",
+        "example": "可以存储大量文本、序列化对象、甚至小型图片的二进制数据",
+        "extra": "String 是 Redis 最基础的数据类型，其他类型底层也依赖 String",
+        "source": "Redis String 基础",
+        "tags": ["Redis", "String", "基础"]
+    },
+    {
+        "front": "SET 和 GET 命令的基本用法",
+        "back": "<b>SET key value</b> - 设置键值对<br><b>GET key</b> - 获取值",
+        "example": "SET username \"张三\"<br>GET username → \"张三\"",
+        "extra": "SET 如果 key 已存在会覆盖旧值，返回 OK 表示成功",
+        "source": "Redis String 命令",
+        "tags": ["Redis", "String", "SET", "GET"]
+    },
+    {
+        "front": "SET 命令的 EX、PX、NX、XX 选项分别是什么？",
+        "back": "<b>EX seconds</b> - 设置过期时间（秒）<br><b>PX milliseconds</b> - 设置过期时间（毫秒）<br><b>NX</b> - key 不存在时才设置<br><b>XX</b> - key 已存在时才设置",
+        "example": "SET token \"abc123\" EX 3600<br>SET lock \"1\" NX",
+        "extra": "NX 常用于分布式锁，EX 常用于缓存过期",
+        "source": "Redis String SET 选项",
+        "tags": ["Redis", "String", "SET", "EX", "NX"]
+    },
+    {
+        "front": "SETNX 命令的作用是什么？",
+        "back": "仅当 key <b>不存在</b>时设置值，等价于 SET key value NX",
+        "example": "SETNX lock \"holder1\" → 1（成功）<br>SETNX lock \"holder2\" → 0（失败，key已存在）",
+        "extra": "常用于实现分布式锁，返回 1 表示获取锁成功，0 表示已被占用",
+        "source": "Redis String 命令",
+        "tags": ["Redis", "String", "SETNX", "分布式锁"]
+    },
+    {
+        "front": "MSET 和 MGET 命令的作用是什么？",
+        "back": "<b>MSET key1 val1 key2 val2 ...</b> - 批量设置多个键值对<br><b>MGET key1 key2 ...</b> - 批量获取多个值",
+        "example": "MSET name \"张三\" age \"25\" city \"北京\"<br>MGET name age city → [\"张三\", \"25\", \"北京\"]",
+        "extra": "批量操作减少网络往返次数，性能比逐个 SET/GET 高很多",
+        "source": "Redis String 批量命令",
+        "tags": ["Redis", "String", "MSET", "MGET", "批量操作"]
+    },
+    {
+        "front": "INCR、INCRBY、DECR、DECRBY 命令分别做什么？",
+        "back": "<b>INCR key</b> - 值 +1<br><b>INCRBY key increment</b> - 值 +increment<br><b>DECR key</b> - 值 -1<br><b>DECRBY key decrement</b> - 值 -decrement",
+        "example": "SET counter 10<br>INCR counter → 11<br>INCRBY counter 5 → 16<br>DECR counter → 15",
+        "extra": "如果 key 不存在，会先初始化为 0 再操作。原子操作，线程安全！",
+        "source": "Redis String 计数命令",
+        "tags": ["Redis", "String", "INCR", "DECR", "计数器"]
+    },
+    {
+        "front": "INCRBYFLOAT 命令的作用是什么？",
+        "back": "对 key 的值进行<b>浮点数</b>增减操作",
+        "example": "SET price 10.5<br>INCRBYFLOAT price 0.3 → \"10.8\"<br>INCRBYFLOAT price -2.1 → \"8.7\"",
+        "extra": "可以处理小数运算，常用于金额、分数等场景",
+        "source": "Redis String 计数命令",
+        "tags": ["Redis", "String", "INCRBYFLOAT", "浮点数"]
+    },
+    {
+        "front": "APPEND 命令的作用是什么？",
+        "back": "在 key 的值后面<b>追加</b>字符串，返回追加后的字符串长度",
+        "example": "SET greeting \"Hello\"<br>APPEND greeting \" World\" → 11<br>GET greeting → \"Hello World\"",
+        "extra": "如果 key 不存在，相当于 SET 一个新值",
+        "source": "Redis String 命令",
+        "tags": ["Redis", "String", "APPEND"]
+    },
+    {
+        "front": "STRLEN 命令的作用是什么？",
+        "back": "返回 key 对应值的<b>字符串长度</b>",
+        "example": "SET name \"张三\"<br>STRLEN name → 6（UTF-8编码，每个中文3字节）",
+        "extra": "注意：中文在 UTF-8 编码下每个字符占 3 个字节",
+        "source": "Redis String 命令",
+        "tags": ["Redis", "String", "STRLEN"]
+    },
+    {
+        "front": "GETRANGE 命令的作用是什么？",
+        "back": "获取字符串的<b>子串</b>，支持负数索引（-1 表示最后一个字符）",
+        "example": "SET greeting \"Hello World\"<br>GETRANGE greeting 0 4 → \"Hello\"<br>GETRANGE greeting 6 -1 → \"World\"",
+        "extra": "类似 Python 的切片操作 string[start:end+1]",
+        "source": "Redis String 命令",
+        "tags": ["Redis", "String", "GETRANGE", "子串"]
+    },
+    {
+        "front": "SETRANGE 命令的作用是什么？",
+        "back": "从指定<b>偏移量</b>开始覆盖写入字符串",
+        "example": "SET greeting \"Hello World\"<br>SETRANGE greeting 6 \"Redis\" → 11<br>GET greeting → \"Hello Redis\"",
+        "extra": "如果偏移量超过原字符串长度，中间会用 \\x00 填充",
+        "source": "Redis String 命令",
+        "tags": ["Redis", "String", "SETRANGE"]
+    },
+    {
+        "front": "GETSET 命令的作用是什么？",
+        "back": "先<b>获取</b>旧值，再<b>设置</b>新值，返回旧值",
+        "example": "SET counter 100<br>GETSET counter 0 → \"100\"<br>GET counter → \"0\"",
+        "extra": "常用于计数器归零场景，一次性拿到旧值并重置",
+        "source": "Redis String 命令",
+        "tags": ["Redis", "String", "GETSET"]
+    },
+    {
+        "front": "Redis String 在 Java 中如何使用？（StringRedisTemplate）",
+        "back": "Spring Boot 通过 <b>StringRedisTemplate</b> 操作 String 类型",
+        "example": "@Autowired<br>StringRedisTemplate redis;<br><br>// 设置<br>redis.opsForValue().set(\"key\", \"value\");<br>// 设置并加过期时间<br>redis.opsForValue().set(\"key\", \"val\", 30, TimeUnit.SECONDS);<br>// 获取<br>String val = redis.opsForValue().get(\"key\");",
+        "extra": "StringRedisTemplate 是 RedisTemplate<String, String> 的特化版，序列化更简单",
+        "source": "Redis Java 操作",
+        "tags": ["Redis", "String", "Java", "SpringBoot"]
+    },
+    {
+        "front": "Redis String 的分布式锁实现原理是什么？",
+        "back": "使用 <b>SET key value NX EX seconds</b> 命令<br>NX 保证互斥，EX 防止死锁",
+        "example": "// 获取锁<br>SET lock:order:1001 \"holder-uuid\" NX EX 30<br><br>// 释放锁（Lua脚本保证原子性）<br>if redis.call('get', KEYS[1]) == ARGV[1] then<br>    return redis.call('del', KEYS[1])<br>end",
+        "extra": "value 用 UUID 标识锁持有者，释放时需要验证，防止误删别人的锁",
+        "source": "Redis 分布式锁",
+        "tags": ["Redis", "String", "分布式锁", "NX"]
+    },
+    {
+        "front": "Redis String 做缓存时，如何防止缓存穿透？",
+        "back": "对查询结果为空的 key 也缓存一个<b>空值</b>（如 \"\" 或 \"null\"），设置较短过期时间",
+        "example": "String result = queryDB(id);<br>if (result == null) {<br>    // 缓存空值，防止穿透<br>    redis.set(\"user:\" + id, \"\", 60);<br>} else {<br>    redis.set(\"user:\" + id, result, 3600);<br>}",
+        "extra": "缓存穿透：大量请求查询不存在的 key，直接打到数据库",
+        "source": "Redis 缓存策略",
+        "tags": ["Redis", "String", "缓存穿透", "缓存策略"]
+    },
+    {
+        "front": "Redis String 做计数器的典型应用场景有哪些？",
+        "back": "① 文章点赞/阅读数<br>② 接口限流计数<br>③ 库存扣减<br>④ 分布式ID生成",
+        "example": "// 阅读数<br>INCR article:1001:views<br><br>// 限流：每分钟最多100次<br>INCR rate:user:1001<br>EXPIRE rate:user:1001 60",
+        "extra": "INCR 是原子操作，在高并发下也能保证数据一致性",
+        "source": "Redis 计数器应用",
+        "tags": ["Redis", "String", "计数器", "INCR", "限流"]
+    },
+    {
+        "front": "Redis String 存储对象有哪些方式？各自的优缺点？",
+        "back": "<b>方式1</b>：JSON 字符串序列化<br>优点：简单直观<br>缺点：修改需读写整个对象<br><br><b>方式2</b>：Hash 结构存储<br>优点：可读写单个字段<br>缺点：占用更多内存",
+        "example": "// 方式1：JSON<br>SET user:1001 '{\"name\":\"张三\",\"age\":25}'<br><br>// 方式2：Hash<br>HSET user:1001 name \"张三\"<br>HSET user:1001 age 25",
+        "extra": "简单对象用 String，频繁修改字段用 Hash",
+        "source": "Redis 数据结构选择",
+        "tags": ["Redis", "String", "Hash", "对象存储"]
+    }
+]

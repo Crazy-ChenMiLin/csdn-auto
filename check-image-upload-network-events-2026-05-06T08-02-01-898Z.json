@@ -1,0 +1,170 @@
+[
+  {
+    "type": "request",
+    "url": "https://creator.douyin.com/creator-micro/content/upload",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:02.269Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://creator.douyin.com/creator-micro/content/upload",
+    "timestamp": "2026-05-06T08:02:02.714Z"
+  },
+  {
+    "type": "request",
+    "url": "https://lf-fe-creator.douyinstatic.com/obj/douyn-creator-scm-cdn/douyin-creator-master-new/static/js/lib-byted-uploader.5a746bf1.js",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:02.761Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://lf-fe-creator.douyinstatic.com/obj/douyn-creator-scm-cdn/douyin-creator-master-new/static/js/lib-byted-uploader.5a746bf1.js",
+    "timestamp": "2026-05-06T08:02:03.921Z"
+  },
+  {
+    "type": "request",
+    "url": "https://lf-fe-creator.douyinstatic.com/obj/douyn-creator-scm-cdn/douyin-creator-content-new/micro/upload/side-code/xg-worker.D-j7FKXK.min.js",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:06.368Z"
+  },
+  {
+    "type": "request",
+    "url": "https://lf-fe-creator.douyinstatic.com/obj/douyn-creator-scm-cdn/douyin-creator-content-new/micro/static/js/async/lib-byted-uploader.96141e7b.js",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:06.785Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://lf-fe-creator.douyinstatic.com/obj/douyn-creator-scm-cdn/douyin-creator-content-new/micro/upload/side-code/xg-worker.D-j7FKXK.min.js",
+    "timestamp": "2026-05-06T08:02:07.061Z"
+  },
+  {
+    "type": "request",
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/js/lib-axios.f89af58c.js",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:07.089Z"
+  },
+  {
+    "type": "request",
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/js/lib-semi.f89af58c.js",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:07.093Z"
+  },
+  {
+    "type": "request",
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/js/lib-react.f89af58c.js",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:07.094Z"
+  },
+  {
+    "type": "request",
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/js/643.f89af58c.js",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:07.094Z"
+  },
+  {
+    "type": "request",
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/js/index.f89af58c.js",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:07.095Z"
+  },
+  {
+    "type": "request",
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/css/lib-semi.d0904f6a.css",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:07.095Z"
+  },
+  {
+    "type": "request",
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/css/643.3d97bb86.css",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:07.095Z"
+  },
+  {
+    "type": "request",
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/css/index.57814008.css",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:07.095Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://lf-fe-creator.douyinstatic.com/obj/douyn-creator-scm-cdn/douyin-creator-content-new/micro/static/js/async/lib-byted-uploader.96141e7b.js",
+    "timestamp": "2026-05-06T08:02:07.108Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/css/lib-semi.d0904f6a.css",
+    "timestamp": "2026-05-06T08:02:07.651Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/css/index.57814008.css",
+    "timestamp": "2026-05-06T08:02:07.657Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/css/643.3d97bb86.css",
+    "timestamp": "2026-05-06T08:02:07.660Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/js/lib-axios.f89af58c.js",
+    "timestamp": "2026-05-06T08:02:07.855Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/js/lib-react.f89af58c.js",
+    "timestamp": "2026-05-06T08:02:08.807Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/js/lib-semi.f89af58c.js",
+    "timestamp": "2026-05-06T08:02:08.922Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/js/index.f89af58c.js",
+    "timestamp": "2026-05-06T08:02:08.962Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/js/643.f89af58c.js",
+    "timestamp": "2026-05-06T08:02:09.012Z"
+  },
+  {
+    "type": "request",
+    "url": "https://summon.bytedance.com/api/v1/resource/upload/token?uploadTerminal=1",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:11.515Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://summon.bytedance.com/api/v1/resource/upload/token?uploadTerminal=1",
+    "timestamp": "2026-05-06T08:02:11.838Z"
+  },
+  {
+    "type": "request",
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/js/async/15.f89af58c.js",
+    "method": "GET",
+    "timestamp": "2026-05-06T08:02:11.840Z"
+  },
+  {
+    "type": "response",
+    "status": 200,
+    "url": "https://lf3-csp.bytetos.com/obj/ies-csp-resource/ies/summon_web/static/js/async/15.f89af58c.js",
+    "timestamp": "2026-05-06T08:02:11.990Z"
+  }
+]

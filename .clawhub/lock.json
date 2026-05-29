@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "skills": {
+    "merge-pdf": {
+      "version": "1.0.0",
+      "installedAt": 1777001281268
+    },
+    "self-improving-agent": {
+      "version": "1.0.11",
+      "installedAt": 1777001665063
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1777001680974
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1777001684508
+    },
+    "multi-search-engine": {
+      "version": "2.0.1",
+      "installedAt": 1777001689601
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1777001694663
+    },
+    "feishu-doc-manager": {
+      "version": "1.0.0",
+      "installedAt": 1777001699705
+    },
+    "word-docx": {
+      "version": "1.0.2",
+      "installedAt": 1777001703561
+    },
+    "data-analysis": {
+      "version": "1.0.2",
+      "installedAt": 1777001707396
+    },
+    "humanizer": {
+      "version": "1.0.0",
+      "installedAt": 1777001713004
+    },
+    "himalaya": {
+      "version": "1.0.0",
+      "installedAt": 1777001719715
+    },
+    "playwright": {
+      "version": "1.0.3",
+      "installedAt": 1778585619169
+    },
+    "playwright-mcp": {
+      "version": "1.0.0",
+      "installedAt": 1778585624437
+    },
+    "playwright-scraper-skill": {
+      "version": "1.2.0",
+      "installedAt": 1778585628389
+    },
+    "playwright-cli-openclaw": {
+      "version": "1.0.0",
+      "installedAt": 1778585632558
+    }
+  }
+}

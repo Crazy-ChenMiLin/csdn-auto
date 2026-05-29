@@ -1,0 +1,40 @@
+{
+  "cookies": [
+    {
+      "domain": ".douyin.com",
+      "name": "sessionid",
+      "path": "/",
+      "value": "6a89d5d1e505bef423b0333275dc31d6",
+      "secure": true,
+      "httpOnly": true,
+      "sameSite": "None"
+    },
+    {
+      "domain": ".douyin.com",
+      "name": "uid_tt",
+      "path": "/",
+      "value": "7a993bcf4d2552d9b8a2e74878db2257",
+      "secure": true,
+      "httpOnly": true,
+      "sameSite": "None"
+    },
+    {
+      "domain": ".douyin.com",
+      "name": "ttwid",
+      "path": "/",
+      "value": "1|eLbrC-30_ADNtQyXriXJLAZOMcVVW3E_7HUGywLFsMY|1777123980|4fcf4e19a58409947007fd29e16c2ce5653879f9c080752991385f7f325e722b",
+      "secure": true,
+      "httpOnly": true,
+      "sameSite": "None"
+    },
+    {
+      "domain": "creator.douyin.com",
+      "name": "passport_csrf_token",
+      "path": "/",
+      "value": "f3c82712dc7c43e6234df2c2258d984d",
+      "secure": true,
+      "httpOnly": false,
+      "sameSite": "None"
+    }
+  ]
+}
