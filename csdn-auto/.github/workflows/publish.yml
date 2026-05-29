@@ -1,0 +1,29 @@
+name: Publish to npm
+
+on:
+  # 方式1：推送 Tag 时触发（推荐）
+  push:
+    tags:
+      - 'v*'
+
+  # 方式2：手动触发（Actions 页面点 Run workflow）
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - run: npm ci
+
+      - run: npm test
+
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
